@@ -16,6 +16,18 @@
     color: #47f8fb;
 }
 
-.opaque {
-
+.goldenRodText {
+    color: goldenrod;
 }
+
+.center {
+    text-align: center;
+}
+
+.create__button {
+    display: block;
+    text-align: center;
+    margin: 1rem auto 0.5rem auto;
+    padding: 0.3rem 0.3rem;
+    font-size: larger;
+  }
