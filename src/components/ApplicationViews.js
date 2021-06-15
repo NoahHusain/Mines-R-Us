@@ -1,22 +1,24 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import { PostProvider } from "./Posts/PostProvider"
+import { PostList } from "./Posts/PostList"
 
 export const ApplicationViews = () => {
     return (
         <>
             {/* Render the location list when http://localhost:3000/ */}
-            <LocationProvider>
+            <PostProvider>
                 <Route exact path="/">
-                    <LocationList />
+                    <PostList />
                 </Route>
-            </LocationProvider>
+            </PostProvider>
 
             {/* Render the animal list when http://localhost:3000/animals */}
-            <AnimalProvider>
-                <Route exact path="/animals">
-                    <AnimalList />
+            <PostProvider>
+                <Route exact path="/posts">
+                    <PostList />
                 </Route>
-            </AnimalProvider>
+            </PostProvider>
         </>
     )
 }
