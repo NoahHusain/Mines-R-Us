@@ -44,7 +44,7 @@ export const PostForm = () => {
               userId: parseInt(userId),
               oreId: parseInt(posts.oreId),
               planetId: parseInt(posts.planetId),
-              moonId: posts.moonId,
+              moonId: parseInt(posts.moonId),
               landingPoint: posts.landingPoint,
               description: posts.description,
               rockData: posts.rockData,
@@ -116,7 +116,7 @@ export const PostForm = () => {
           </div>
         </fieldset>
         
-        <button className="btn btn-primary"
+        <button className="center post blueText"
           onClick={event => {
             event.preventDefault() 
             handleSavePost()
