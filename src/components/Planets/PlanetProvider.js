@@ -10,48 +10,48 @@ export const PlanetProvider = (props) => {
     const getPlanets = () => {
         return fetch("http://localhost:8088/planets")
         .then(res => res.json())
-        .then(setMoons)
+        .then(setPlanets)
     }
 
-    const addMoon = moonObject => {
+    const addPlanet = planetObject => {
         return fetch("http://localhost:8088/moons", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(oreOmoonObjectbject)
+            body: JSON.stringify(planetObject)
         })
-        .then(getMoons)
+        .then(getPlanets)
     }
 
-    const deleteMoon = moonId => {
-        return fetch(`http://localhost:8088/moons/${moonId}`, {
+    const deletePlanet = planetId => {
+        return fetch(`http://localhost:8088/planets/${planetId}`, {
             method: "DELETE"
         })
-            .then(getMoons)
+            .then(getPlanets)
     }
 
-    const updateMoon = moonId => {
-        return fetch(`http://localhost:8088/moons/${moonId}`, {
+    const updatePlanet = planetId => {
+        return fetch(`http://localhost:8088/planets/${planetId}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(moonId)
+          body: JSON.stringify(planetId)
         })
-          .then(getMoons)
+          .then(getPlanets)
       }
 
-      const getMoonById = moonId => {
-        return fetch(`http://localhost:8088/moons/${moonId}`)
+      const getPlanetById = planetId => {
+        return fetch(`http://localhost:8088/planets/${planetId}`)
         .then(res => res.json())
     }
 
     return (
-        <MoonContext.Provider value={{
-            moons, getMoons, addMoon, deleteMoon, updateMoon, getMoonById
+        <PlanetContext.Provider value={{
+            planets, getPlanets, addPlanet, deletePlanet, updatePlanet, getPlanetById
         }}>
             {props.children}
-        </MoonContext.Provider>
+        </PlanetContext.Provider>
     )
 }

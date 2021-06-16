@@ -19,7 +19,7 @@ export const MoonProvider = (props) => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(oreOmoonObjectbject)
+            body: JSON.stringify(moonObject)
         })
         .then(getMoons)
     }

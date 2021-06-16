@@ -5,11 +5,13 @@ import { PostList } from "./Posts/PostList"
 import { PostForm } from "./Posts/PostForm"
 import { OreProvider } from "./Ores/OreProvider"
 import { MoonProvider } from "./Moons/MoonProvider"
+import { PlanetProvider } from "./Planets/PlanetProvider"
 
 export const ApplicationViews = () => {
     return (
         <>
             <PostProvider>
+                <PlanetProvider>
                 <MoonProvider>
                 <OreProvider>
 
@@ -27,6 +29,7 @@ export const ApplicationViews = () => {
 
                 </OreProvider>
                 </MoonProvider>
+                </PlanetProvider>
             </PostProvider>
         </>
     )
