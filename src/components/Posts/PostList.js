@@ -26,7 +26,7 @@ export const PostList = () => {
                         <section className="posts">
                         <article className="post" id={`post--${post.id}`}>
 
-                        
+
                         <div className="post__oreId blueText opaque">
                         Ore: { post.ore.name }
                         </div>
@@ -34,7 +34,10 @@ export const PostList = () => {
                         Planet: { post.planet.name}
                         </div>
                         <div className="post__moonId blueText opaque">
-                        Moon: { post.moon.name }
+                        { post.moon 
+                            ? `Moon: ${post.moon.name}` 
+                                : null} 
+                        {/* If moon has an ID, render the div. If not, do not render the div */}
                         </div>
                         <div className="post__landingPoint blueText opaque">
                         Landing Point: { post.landingPoint }

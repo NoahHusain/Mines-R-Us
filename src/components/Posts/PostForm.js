@@ -14,7 +14,7 @@ export const PostForm = () => {
 
 
     
-    const [posts, setPosts] = useState({})
+    const [posts, setPosts] = useState({moonId: 0})
     const [isLoading, setIsLoading] = useState(true);
 
     const {postId} = useParams();
@@ -40,23 +40,11 @@ export const PostForm = () => {
 
     const handleSavePost = () => {
         const userId = localStorage.getItem("mines_customer")  
-        const postMoonId = posts.moonId
-        const moonId = (postMoonId) => {
-          debugger
-          if (postMoonId === null || postMoonId === undefined){
-            const moonId = "Ore was found on the planet."
-            return moonId
-          }
-          else {
-            const moonId = parseInt(postMoonId)
-            return moonId
-          }
-        }
         addPost({
               userId: parseInt(userId),
               oreId: parseInt(posts.oreId),
               planetId: parseInt(posts.planetId),
-              moonId: moonId(),
+              moonId: posts.moonId,
               landingPoint: posts.landingPoint,
               description: posts.description,
               rockData: posts.rockData,
