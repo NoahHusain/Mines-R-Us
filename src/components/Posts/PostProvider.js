@@ -13,7 +13,7 @@ export const PostProvider = (props) => {
         .then(setPosts)
     }
 
-    const addPosts = postObject => {
+    const addPost = postObject => {
         return fetch("http://localhost:8088/orePatches", {
             method: "POST",
             headers: {
@@ -49,7 +49,7 @@ export const PostProvider = (props) => {
 
     return (
         <PostContext.Provider value={{
-            posts, getPosts, addPosts, deletePost, updatePost, getPostById
+            posts, getPosts, addPost, deletePost, updatePost, getPostById
         }}>
             {props.children}
         </PostContext.Provider>

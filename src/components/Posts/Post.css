@@ -30,4 +30,11 @@
     margin: 1rem auto 0.5rem auto;
     padding: 0.3rem 0.3rem;
     font-size: larger;
-  }
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
