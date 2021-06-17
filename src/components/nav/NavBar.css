@@ -1,7 +1,19 @@
+.navbar1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .navbar {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: left;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.alignRight {
+    text-align: right;
+    margin-right: 1.6rem;
+    
 }
 
 .navbar__item {

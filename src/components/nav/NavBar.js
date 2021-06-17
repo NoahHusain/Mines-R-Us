@@ -2,12 +2,24 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./NavBar.css"
 
+
+
 export const NavBar = (props) => {
+    const logout = () => {
+        localStorage.clear("mines_customer")
+    }
     return (
-        <ul className="navbar">
-            <li className="navbar__item active">
+        <>
+        <ul className="navbar1">
+        <li className="navbar__item active">
                 <Link className="navbar__link" to="/">Mines-R-Us</Link>
-            </li>
+        </li>
+        <li className="alignRight navbar__item active">
+                <Link onClick={logout}className="navbar__link" to="/login">Logout</Link>
+        </li>
+        </ul>
+        <ul className="navbar">
+            
             <li className="navbar__item">
                 <Link className="navbar__link" to="/Posts">Posts</Link>
             </li>
@@ -24,5 +36,6 @@ export const NavBar = (props) => {
                 <Link className="navbar__link" to="/Noobs-Guide">Noobs Guide</Link>
             </li>
         </ul>
+        </>
     )
 }
