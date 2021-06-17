@@ -7,7 +7,7 @@ import { MoonContext } from "../Moons/MoonProvider";
 import { PlanetContext } from "../Planets/PlanetProvider";
 
 export const PostForm = () => {
-    const { addPost, updatePost } = useContext(PostContext)
+    const { addPost, updatePost, getPostById } = useContext(PostContext)
     const {ores, getOres} = useContext(OreContext)
     const {moons, getMoons} = useContext(MoonContext)
     const {planets, getPlanets} = useContext(PlanetContext)
@@ -37,6 +37,8 @@ export const PostForm = () => {
     useEffect(() => {
         getMoons()
     }, [])
+
+
 
     const handleSavePost = () => {
         const userId = localStorage.getItem("mines_customer")  

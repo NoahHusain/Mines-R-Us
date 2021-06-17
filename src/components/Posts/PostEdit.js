@@ -12,17 +12,17 @@ export const PostEdit = () => {
   const { moons, getMoons } = useContext(MoonContext);
   const { planets, getPlanets } = useContext(PlanetContext);
 
-  const [posts, setPosts] = useState({});
+  // const [posts, setPosts] = useState({});
+  const [post, setPost] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
   const { postId } = useParams();
   const history = useHistory();
-  console.log(postId);
 
   const handleControlledInputChange = (event) => {
-    const newPost = { ...posts };
+    const newPost = { ...post };
     newPost[event.target.name] = event.target.value;
-    setPosts(newPost);
+    setPost(newPost);
   };
 
   useEffect(() => {
@@ -36,19 +36,24 @@ export const PostEdit = () => {
   useEffect(() => {
     getMoons();
   }, []);
+  
+  useEffect(() => {
+    getPostById(postId).then(post => {
+      setPost(post)
+    })
+  }, [postId]);
 
   const handleSavePost = (postId) => {
     const userId = localStorage.getItem("mines_customer");
-    console.log(posts);
     updatePost({
           id: postId,
           userId: parseInt(userId),
-          oreId: parseInt(posts.oreId),
-          planetId: parseInt(posts.planetId),
-          moonId: posts.moonId,
-          landingPoint: posts.landingPoint,
-          description: posts.description,
-          rockData: posts.rockData,
+          oreId: parseInt(post.oreId),
+          planetId: parseInt(post.planetId),
+          moonId: parseInt(post.moonId),
+          landingPoint: post.landingPoint,
+          description: post.description,
+          rockData: post.rockData,
       })
       .then(() => history.push("/posts"))
     }
@@ -62,7 +67,7 @@ export const PostEdit = () => {
           <div className="center posts blueText">
             <label htmlFor="ore">Ore:</label>
             <select
-              value={posts.oreId}
+              value={post.oreId}
               name="oreId"
               id="oreId"
               className="center post blueText"
@@ -81,7 +86,7 @@ export const PostEdit = () => {
           <div className="center posts blueText">
             <label htmlFor="planet">Planet:</label>
             <select
-              value={posts.planetId}
+              value={post.planetId}
               name="planetId"
               id="planetId"
               className="center post blueText"
@@ -100,7 +105,7 @@ export const PostEdit = () => {
           <div className="center posts blueText">
             <label htmlFor="moon">Moon:</label>
             <select
-              value={posts.moonId}
+              value={post.moonId}
               name="moonId"
               id="moonId"
               className="center post blueText"
@@ -119,7 +124,7 @@ export const PostEdit = () => {
           <div className="center posts blueText">
             <label htmlFor="landingPoint">Landing Point:</label>
             <input
-              value={posts.landingPoint}
+              value={post.landingPoint}
               type="landingPoint"
               id="landingPoint"
               name="landingPoint"
@@ -132,11 +137,12 @@ export const PostEdit = () => {
           <div className="center posts blueText">
             <label htmlFor="description">Description:</label>
             <input
-              value={posts.description}
+              value={post.description}
               type="description"
               id="description"
               name="description"
               className="center post blueText"
+              defaultValue={post.description}
               onChange={handleControlledInputChange}
             />
           </div>
@@ -145,11 +151,12 @@ export const PostEdit = () => {
           <div className="center posts blueText">
             <label htmlFor="rockData">Rock Data:</label>
             <input
-              value={posts.rockData}
+              value={post.rockData}
               type="rockData"
               id="rockData"
               name="rockData"
               className="center post blueText"
+              defaultValue={post.rockData}
               onChange={handleControlledInputChange}
             />
           </div>
