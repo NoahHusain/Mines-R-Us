@@ -52,7 +52,7 @@ export const PostList = () => {
               Largest Rock Found: {post.rockData}
             </div>
             <div className="post__userId blueText">
-              Posted By: {post.user.name}
+              Posted By: {post.user.name} on {post.timestamp}
             </div>
             <button
               className="post blueText"

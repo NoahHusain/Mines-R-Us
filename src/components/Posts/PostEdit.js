@@ -7,7 +7,7 @@ import { MoonContext } from "../Moons/MoonProvider";
 import { PlanetContext } from "../Planets/PlanetProvider";
 
 export const PostEdit = () => {
-  const { updatePost } = useContext(PostContext);
+  const { updatePost, getPostById } = useContext(PostContext);
   const { ores, getOres } = useContext(OreContext);
   const { moons, getMoons } = useContext(MoonContext);
   const { planets, getPlanets } = useContext(PlanetContext);

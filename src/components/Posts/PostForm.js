@@ -48,6 +48,7 @@ export const PostForm = () => {
               landingPoint: posts.landingPoint,
               description: posts.description,
               rockData: posts.rockData,
+              timestamp: new Date().toISOString().slice(0, 10)
           })
           .then(() => history.push("/posts"))
         }

@@ -45,6 +45,7 @@ export const PostProvider = (props) => {
       const getPostById = orePatchId => {
         return fetch(`http://localhost:8088/orePatches/${orePatchId}`)
         .then(res => res.json())
+        .then(setPosts)
     }
 
     return (
