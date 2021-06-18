@@ -54,6 +54,7 @@ export const PostEdit = () => {
           landingPoint: post.landingPoint,
           description: post.description,
           rockData: post.rockData,
+          timestamp: post.timestamp,
       })
       .then(() => history.push("/posts"))
     }
