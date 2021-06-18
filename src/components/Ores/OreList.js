@@ -11,22 +11,112 @@ export const OreList = () => {
     getOres();
   }, []);
 
+
+  const exceedinglyRareOres = []
+  const rareOres = []
+  const lessCommonOres = []
+  const commonOres = []
+  const exceedinglyCommonOres = []
+
+  const sortedOres = ores.map(ore => {
+    switch (ore.rarity) {
+      case 'Exceedingly Rare':
+        exceedinglyRareOres.push(ore)
+        break;
+      
+        case 'Rare':
+        rareOres.push(ore)
+        break;
+      
+        case 'Less Common':
+        lessCommonOres.push(ore)
+        break;
+      
+        case 'Common':
+        commonOres.push(ore)
+        break;
+  
+        case 'Exceedingly Common':
+        exceedinglyCommonOres.push(ore)
+        break;
+      
+        default:
+        break;
+      }
+    }
+  )
+
+
   return (
     <>
-      <h1 className="goldenRodText center">Ores</h1>
+      <h1 className="goldenRodText center">Ore</h1>
 
-      {ores.map((ore) => (
+      <h2 className="goldenRodText center">Exceedingly Rare Ores</h2>
+      {exceedinglyRareOres.map((ore) => (
         <section className="posts">
           <article className="post">
             <div className="post__oreId blueText">Name: {ore.name}</div>
-            <div className="post__planetId blueText">
-              Rarity: {ore.rarity}
-            </div>
             <div className="post__landingPoint blueText">
-              Value Raw: {ore.valueRaw}
+              Value Raw: {ore.valueRaw} UEC
             </div>
             <div className="post__description blueText">
-            Value Refined: {ore.valueRefined}
+            Value Refined: {ore.valueRefined} UEC
+            </div>
+          </article>
+        </section>
+      ))}
+      <h2 className="goldenRodText center">Rare Ores</h2>
+      {rareOres.map((ore) => (
+        <section className="posts">
+          <article className="post">
+            <div className="post__oreId blueText">Name: {ore.name}</div>
+            <div className="post__landingPoint blueText">
+              Value Raw: {ore.valueRaw} UEC
+            </div>
+            <div className="post__description blueText">
+            Value Refined: {ore.valueRefined} UEC
+            </div>
+          </article>
+        </section>
+      ))}
+      <h2 className="goldenRodText center">Less Common Ores</h2>
+      {lessCommonOres.map((ore) => (
+        <section className="posts">
+          <article className="post">
+            <div className="post__oreId blueText">Name: {ore.name}</div>
+            <div className="post__landingPoint blueText">
+              Value Raw: {ore.valueRaw} UEC
+            </div>
+            <div className="post__description blueText">
+            Value Refined: {ore.valueRefined} UEC
+            </div>
+          </article>
+        </section>
+      ))}
+      <h2 className="goldenRodText center">Common Ores</h2>
+      {commonOres.map((ore) => (
+        <section className="posts">
+          <article className="post">
+            <div className="post__oreId blueText">Name: {ore.name}</div>
+            <div className="post__landingPoint blueText">
+              Value Raw: {ore.valueRaw} UEC
+            </div>
+            <div className="post__description blueText">
+            Value Refined: {ore.valueRefined} UEC
+            </div>
+          </article>
+        </section>
+      ))}
+      <h2 className="goldenRodText center">Exceedingly Common Ores</h2>
+      {exceedinglyCommonOres.map((ore) => (
+        <section className="posts">
+          <article className="post">
+            <div className="post__oreId blueText">Name: {ore.name}</div>
+            <div className="post__landingPoint blueText">
+              Value Raw: {ore.valueRaw} UEC
+            </div>
+            <div className="post__description blueText">
+            Value Refined: {ore.valueRefined}UEC
             </div>
           </article>
         </section>
