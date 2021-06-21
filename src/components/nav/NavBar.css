@@ -21,3 +21,7 @@
     flex-basis: 7%;
     list-style-type: none;
 }
+
+.logo {
+    height: 5rem
+}

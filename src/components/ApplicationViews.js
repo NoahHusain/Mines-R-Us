@@ -8,6 +8,7 @@ import { OreProvider } from "./Ores/OreProvider";
 import { MoonProvider } from "./Moons/MoonProvider";
 import { PlanetProvider } from "./Planets/PlanetProvider";
 import { OreList } from "./Ores/OreList";
+import { NoobsList } from "./Noobs-Guide/NoobsList";
 
 export const ApplicationViews = () => {
   return (
@@ -35,6 +36,11 @@ export const ApplicationViews = () => {
               <Route exact path="/Ores">
                 <OreList />
               </Route>
+
+              <Route exact path="/Noobs-Guide">
+                <NoobsList />
+              </Route>
+              
             </OreProvider>
           </MoonProvider>
         </PlanetProvider>

@@ -54,7 +54,7 @@ export const OreList = () => {
       <h2 className="goldenRodText center">Exceedingly Rare Ores</h2>
       {exceedinglyRareOres.map((ore) => (
         <section className="posts">
-          <article className="post">
+          <article className="post centerOres">
             <div className="post__oreId blueText">Name: {ore.name}</div>
             <div className="post__landingPoint blueText">
               Value Raw: {ore.valueRaw} UEC
@@ -68,7 +68,7 @@ export const OreList = () => {
       <h2 className="goldenRodText center">Rare Ores</h2>
       {rareOres.map((ore) => (
         <section className="posts">
-          <article className="post">
+          <article className="post centerOres">
             <div className="post__oreId blueText">Name: {ore.name}</div>
             <div className="post__landingPoint blueText">
               Value Raw: {ore.valueRaw} UEC
@@ -82,7 +82,7 @@ export const OreList = () => {
       <h2 className="goldenRodText center">Less Common Ores</h2>
       {lessCommonOres.map((ore) => (
         <section className="posts">
-          <article className="post">
+          <article className="post centerOres">
             <div className="post__oreId blueText">Name: {ore.name}</div>
             <div className="post__landingPoint blueText">
               Value Raw: {ore.valueRaw} UEC
@@ -96,7 +96,7 @@ export const OreList = () => {
       <h2 className="goldenRodText center">Common Ores</h2>
       {commonOres.map((ore) => (
         <section className="posts">
-          <article className="post">
+          <article className="post centerOres">
             <div className="post__oreId blueText">Name: {ore.name}</div>
             <div className="post__landingPoint blueText">
               Value Raw: {ore.valueRaw} UEC
@@ -110,7 +110,7 @@ export const OreList = () => {
       <h2 className="goldenRodText center">Exceedingly Common Ores</h2>
       {exceedinglyCommonOres.map((ore) => (
         <section className="posts">
-          <article className="post">
+          <article className="post centerOres">
             <div className="post__oreId blueText">Name: {ore.name}</div>
             <div className="post__landingPoint blueText">
               Value Raw: {ore.valueRaw} UEC
