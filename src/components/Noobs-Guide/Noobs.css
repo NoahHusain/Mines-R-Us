@@ -31,6 +31,24 @@
     flex-direction: column;
 }
 
+.flexParagraph4 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flexParagraph5 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flexParagraph6 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .paragraphs {
     margin: 1em;
     padding: 1em;
@@ -49,4 +67,16 @@
     height: 10rem;
     width: 10rem;
     margin: .50rem;
+}
+
+.miningUI{
+    height: 25rem;
+    width: 35rem;
+    margin: .75rem;
+}
+
+.scanningUI{
+    height: 10rem;
+    width: 25rem;
+    margin: .75rem;
 }

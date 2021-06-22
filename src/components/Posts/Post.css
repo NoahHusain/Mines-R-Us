@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
   
 .post {
@@ -37,4 +38,8 @@
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
+}
+
+.centerLabel{
+    justify-content: center;
 }

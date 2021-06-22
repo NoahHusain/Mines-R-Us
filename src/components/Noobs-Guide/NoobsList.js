@@ -1,5 +1,5 @@
 import "./Noobs.css"
-import { Prelude, PartOne, PartTwo, PartThree } from "./NoobsContent";
+import { Prelude, PartOne, PartTwo, PartThree, PartFour, PartFive, PartSix } from "./NoobsContent";
 
 export const NoobsList = () => {
 
@@ -19,6 +19,15 @@ export const NoobsList = () => {
 
     <h2 className="goldenRodText center">Part Three: Consumables</h2>
     <div className="blueText paragraphs">{PartThree()}</div>
+
+    <h2 className="goldenRodText center">Part Four: Finding & Scanning Ore Patches</h2>
+    <div className="blueText paragraphs">{PartFour()}</div>
+
+    <h2 className="goldenRodText center">Part Five: Cracking & Extracting</h2>
+    <div className="blueText paragraphs">{PartFive()}</div>
+
+    <h2 className="goldenRodText center">Part Six: Refining & Payday</h2>
+    <div className="blueText paragraphs">{PartSix()}</div>
 
 
     </>

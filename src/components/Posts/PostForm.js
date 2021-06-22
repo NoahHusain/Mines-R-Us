@@ -60,11 +60,11 @@ export const PostForm = () => {
       <>
       <h1 className="goldenRodText center">New Post</h1>
 
-        <form className="flex">
+        <form className="flex post">
       <fieldset>
-          <div className="center posts blueText">
-            <label htmlFor="ore">Ore:</label>
-            <select value={posts.oreId} name="oreId" id="oreId" className="center post blueText" onChange={handleControlledInputChange}>
+          <div className="center posts  blueText">
+            <label className="centerLabel" htmlFor="ore">Ore:</label>
+            <select value={posts.oreId} name="oreId" id="oreId" className="center  post blueText" onChange={handleControlledInputChange}>
               <option value="0">Select an Ore</option>
               {ores.map(ore => (
                 <option key={ore.id} value={ore.id}>
@@ -75,9 +75,9 @@ export const PostForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="center posts blueText">
+          <div className="center posts  blueText">
             <label htmlFor="planet">Planet:</label>
-            <select value={posts.planetId} name="planetId" id="planetId" className="center post blueText" onChange={handleControlledInputChange}>
+            <select value={posts.planetId} name="planetId" id="planetId" className="center  post blueText" onChange={handleControlledInputChange}>
               <option value="0">Select Planet</option>
               {planets.map(planet => (
                 <option key={planet.id} value={planet.id}>
@@ -88,9 +88,9 @@ export const PostForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="center posts blueText">
+          <div className="center posts  blueText">
             <label htmlFor="moon">Moon:</label>
-            <select value={posts.moonId} name="moonId" id="moonId" className="center post blueText" onChange={handleControlledInputChange}>
+            <select value={posts.moonId} name="moonId" id="moonId" className="center  post blueText" onChange={handleControlledInputChange}>
               <option value="0">Select Moon (if applicable)</option>
               {moons.map(moon => (
                 <option key={moon.id} value={moon.id}>
@@ -101,21 +101,21 @@ export const PostForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="center posts blueText">
+          <div className="center posts  blueText">
             <label htmlFor="landingPoint">Landing Point:</label>
-            <input value={posts.landingPoint} type="landingPoint" id="landingPoint" name="landingPoint" className="center post blueText" onChange={handleControlledInputChange}/>
+            <input value={posts.landingPoint} type="landingPoint" id="landingPoint" name="landingPoint" className="center  post blueText" onChange={handleControlledInputChange}/>
           </div>
         </fieldset>
         <fieldset>
-          <div className="center posts blueText">
+          <div className="center posts  blueText">
             <label htmlFor="description">Description:</label>
-            <input value={posts.description} type="description" id="description" name="description" className="center post blueText" onChange={handleControlledInputChange}/>
+            <textarea value={posts.description} type="description" id="description" name="description" className="center  post blueText" onChange={handleControlledInputChange}/>
           </div>
         </fieldset>
         <fieldset>
-          <div className="center posts blueText">
+          <div className="center posts  blueText">
             <label htmlFor="rockData">Rock Data:</label>
-            <input value={posts.rockData} type="rockData" id="rockData" name="rockData" className="center post blueText" onChange={handleControlledInputChange}/>
+            <input value={posts.rockData} type="rockData" id="rockData" name="rockData" className="center  post blueText" onChange={handleControlledInputChange}/>
           </div>
         </fieldset>
         

@@ -65,22 +65,22 @@ export const PartOne = () => {
           </p>
         </div>
 
-        <div className="column">  
-        <div>
-          <img
-            className="ships"
-            alt="MISC Prospector"
-            src="https://starcitizen.tools/images/d/dd/Prospector_-_Hovering_mining_on_cliffside_1.jpg?version=d91df8db9e0385c14393bbef6e39c5f1"
-          ></img>
+        <div className="column">
+          <div>
+            <img
+              className="ships"
+              alt="MISC Prospector"
+              src="https://starcitizen.tools/images/d/dd/Prospector_-_Hovering_mining_on_cliffside_1.jpg?version=d91df8db9e0385c14393bbef6e39c5f1"
+            ></img>
+          </div>
+          <div>
+            <img
+              className="ships"
+              alt="ARGO Mole"
+              src="https://i.redd.it/s3clvk6io2v51.jpg"
+            ></img>
+          </div>
         </div>
-        <div>
-          <img
-            className="ships"
-            alt="ARGO Mole"
-            src="https://i.redd.it/s3clvk6io2v51.jpg"
-          ></img>
-        </div>
-      </div>
       </div>
     </>
   );
@@ -172,31 +172,32 @@ export const PartTwo = () => {
 export const PartThree = () => {
   return (
     <>
-    <div className="flexParagraph3">
-      <p>
-        Consumables are temporary and expendable boosters that change the lasers
-        characteristics to aid the laser operator in cracking the rock by
-        modifying one or many of the five quirks discussed about mining lasers.
-        All consumables are manufactured by MISC, who also created the
-        Prospector mining ship from part one. These are near mandatory to carry
-        to increase your effectiveness. Some are better than others and we will
-        be discussing only the best of the best. First off and most important is
-        Surge. Surge is an instant use consumable that overloads your lasers
-        power after a slight delay instantly raising the rocks energy level by
-        40%. This consumable allows the operator to not worry about the lasers
-        energy output as much and will allow you to crack even the largest of
-        rocks. Next up is Stampede. Stampede is a 60 second boost to the optimal
-        charge rate of the rock. With this consumable, staying in the optimal
-        charge zone (green zone) will crack the rock twice as fast as normal.
-        Third is the Brandt consumable. Brandt alters the output of your laser
-        for 30 seconds allowing it to be more stable and causing the instability
-        of the rock to decrease leading to safer mining operations. Honorable
-        mentions for other consumables would be Lifeline which will remove
-        charge from a rock that is close to exploding, and Optimum which
-        increases the optimal charge window of the rock you are mining.
-      </p>
+      <div className="flexParagraph3">
+        <p>
+          Consumables are temporary and expendable boosters that change the
+          lasers characteristics to aid the laser operator in cracking the rock
+          by modifying one or many of the five quirks discussed about mining
+          lasers. All consumables are manufactured by MISC, who also created the
+          Prospector mining ship from part one. These are near mandatory to
+          carry to increase your effectiveness. Some are better than others and
+          we will be discussing only the best of the best. First off and most
+          important is Surge. Surge is an instant use consumable that overloads
+          your lasers power after a slight delay instantly raising the rocks
+          energy level by 40%. This consumable allows the operator to not worry
+          about the lasers energy output as much and will allow you to crack
+          even the largest of rocks. Next up is Stampede. Stampede is a 60
+          second boost to the optimal charge rate of the rock. With this
+          consumable, staying in the optimal charge zone (green zone) will crack
+          the rock twice as fast as normal. Third is the Brandt consumable.
+          Brandt alters the output of your laser for 30 seconds allowing it to
+          be more stable and causing the instability of the rock to decrease
+          leading to safer mining operations. Honorable mentions for other
+          consumables would be Lifeline which will remove charge from a rock
+          that is close to exploding, and Optimum which increases the optimal
+          charge window of the rock you are mining.
+        </p>
 
-      <div className="row">
+        <div className="row">
           <div>
             <img
               className="consumables"
@@ -219,7 +220,132 @@ export const PartThree = () => {
             ></img>
           </div>
         </div>
+      </div>
+    </>
+  );
+};
+
+export const PartFour = () => {
+  return (
+    <>
+      <div className="flexParagraph">
+        <p>
+          Finally after hours of prepping you have your ship, mining laser, and
+          consumables ready to go. Now we can finally start talking about where
+          to find ore and luckily finding ore is easy to do! Ore can be found on
+          or in any planet, moon, or asteroid belt. Simply fly to a location and
+          hit TAB (default key can be changed in settings) to switch to scan
+          mode. In scan mode you hold down right click to charge a scan pulse.
+          The pulse can be charged to anywhere between 0 and 100% and released
+          at any point within that range. The stronger the ping the farther away
+          it will find ore but it will also have a longer cooldown period. Once
+          you start scanning and an ore patch is found, you will see a
+          holographic cube on your HUD showing you a general area of where the
+          ore can be found. As you get closer to the cube, continue to scan
+          which will decrease the cubes size to pinpoint where the ore patch is.
+          Once you are within 2km of the ore patch your ship will now display
+          rock symbols on your HUD where the rocks are located. Now that you
+          have found the ore patch, steady your ship and point its nose onto the
+          ore patch. Hold down the left click button and your ship will begin to
+          scan the rock. You will be able to see in real time the rock data
+          showing up on your HUD (Mass, resistance, ore compositions present,
+          etc.). You will want to pay attention to the right side of your HUD
+          that gives a detailed breakdown of what ore is located within the rock
+          you are scanning and at what percentage it is concentrated in. Most if
+          not all rocks are a combination of many different ore types. It is up
+          to you the operator to determine what ore is worth mining to you and
+          at what yield percentage. Visit the Ores page to see a detailed
+          breakdown of the value of each ore type along with its rarity.
+        </p>
+
+        <div className="column">
+          <div>
+            <img
+              className="scanningUI"
+              alt="Mining UI"
+              src="https://starcitizen.tools/images/thumb/b/bb/Composition.jpg/677px-Composition.jpg"
+            ></img>
+          </div>
         </div>
+      </div>
+    </>
+  );
+};
+
+export const PartFive = () => {
+  return (
+    <>
+      <div className="flexParagraph">
+        <p>
+          Now that you have found an ore patch you like, you will want to
+          collect the ore within the rock and store it in your ship. In order to
+          do this you will first need to “crack” the rock and break it into
+          smaller extractable pieces. You begin this process by initiating your
+          ships mining mode by pressing “M” on the keyboard. You will see your
+          mining laser extend and HUD change to the mining mode giving you the
+          ore data that you scanned previously. Again point your ship towards
+          the rock in mining mode to get the details needed to safely crack the
+          rock. After a brief secondary scan, your HUD will modify to show you
+          on the left your mining lasers current power output between 0 and 100%
+          and on the right the rocks overall heat level between 0 and 100% along
+          with three color zones. White is the zone every rock begins in. This
+          level of heat within the rock is insufficient to cause the rock to
+          crack into smaller pieces. After white is green. This is the optimal
+          charge level of the rock and is where you want to keep the heat level
+          within to crack the rock. After green is red, also known as the danger
+          zone. If the heat of the rock reaches this level your ship will alarm
+          you that the rocks heat level is at the critical level. If kept in
+          this zone for too long the rock will explode and likely kill you. To
+          begin, increase your mining lasers power output to maximum level.
+          Scroll up on the mouse wheel and back on the mousewheel to decrease
+          power level. You will see that as you increase output the rock will
+          begin to visually heat up and the heat level will increase on the
+          right side of the HUD. Keep your laser on full blast until you are in
+          the green zone then begin to ease off the power to keep it within the
+          optimal charge level. If you go into the red zone, decrease power
+          significantly until you are back in the green. As you stay in the
+          green or red zone, the zone will expand to the left towards the center
+          of your HUD. Once that zone is full on the green, the rock will crack
+          into smaller pieces. If you fill the red zone, you know what happens.
+          Kaboom. Ok so you now have cracked the rock into smaller pieces and
+          think you are ready to extract but you will be somewhat annoyed to
+          realize that the rocks once again need to be cracked in order to get
+          them small enough for extraction. Furthermore, you will need to once
+          again scan each cracked rock to see their ore composition as it has
+          changed from the original rock scan. Only crack the rocks that have
+          the highest amount of actual ore in them while ignoring the rocks that
+          have lots of filler inert materials as those are worthless to take to
+          the refinery. After cracking the rocks a second time you are finally
+          ready to extract. Right click while in mining mode to switch to
+          extraction mode. In extraction mode your laser will extract the
+          materials out of the cracked ore and bring it aboard your ship. You
+          will see on the right side of your HUD that the cargo hold is now
+          displayed and shows you what you are now carrying. Again, be sure to
+          only extract the rocks that have the highest percentage of minerals
+          within them as you don’t want to take up valuable cargo space with ore
+          that is not worth it.
+        </p>
+
+        <div className="column">
+          <div>
+            <img
+              className="miningUI"
+              alt="Mining UI"
+              src="https://i.redd.it/pbnhz1py3qu51.png"
+            ></img>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export const PartSix = () => {
+  return (
+    <>
+      <div className="flexParagraph6">
+        <p>Lorem Ipsum</p>
+      </div>
     </>
   );
 };
