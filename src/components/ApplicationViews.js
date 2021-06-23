@@ -11,6 +11,10 @@ import { OreList } from "./Ores/OreList";
 import { NoobsList } from "./Noobs-Guide/NoobsList";
 import { EquipmentList } from "./Equipment/EquipmentList";
 import { EquipmentProvider } from "./Equipment/EquipmentProvider";
+import { ShipDetail } from "./Equipment/ShipDetail";
+import { LaserDetail } from "./Equipment/LaserDetail";
+import { ConsumableDetail } from "./Equipment/ConsumableDetail";
+
 
 export const ApplicationViews = () => {
   return (
@@ -47,6 +51,18 @@ export const ApplicationViews = () => {
               <Route exact path="/Equipment">
                 <EquipmentList />
               </Route>
+
+              <Route exact path="/ships/detail/:shipId(\d+)">
+              <ShipDetail />
+            </Route>
+
+            <Route exact path="/lasers/detail/:laserId(\d+)">
+              <LaserDetail />
+            </Route>
+
+            <Route exact path="/consumables/detail/:consumableId(\d+)">
+              <ConsumableDetail />
+            </Route>
               
             </OreProvider>
           </MoonProvider>

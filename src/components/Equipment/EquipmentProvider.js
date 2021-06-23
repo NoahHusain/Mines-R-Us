@@ -16,8 +16,20 @@ export const EquipmentProvider = (props) => {
         .then(setShips)
     }
 
+    const getShipById = (id) => {
+        return fetch(`http://localhost:8088/ships/${id}`)
+        .then(res => res.json())
+        .then(setShips)
+    }
+
     const getMiningLasers = () => {
         return fetch("http://localhost:8088/miningLasers")
+        .then(res => res.json())
+        .then(setMiningLasers)
+    }
+
+    const getMiningLaserById = (id) => {
+        return fetch(`http://localhost:8088/miningLasers/${id}`)
         .then(res => res.json())
         .then(setMiningLasers)
     }
@@ -28,10 +40,16 @@ export const EquipmentProvider = (props) => {
         .then(setConsumables)
     }
 
+    const getConsumableById = (id) => {
+        return fetch(`http://localhost:8088/consumables/${id}`)
+        .then(res => res.json())
+        .then(setConsumables)
+    }
+
 
     return (
         <EquipmentContext.Provider value={{
-            ships, miningLasers, consumables, getShips, getMiningLasers, getConsumables
+            ships, miningLasers, consumables, getShips, getMiningLasers, getConsumables, getShipById, getMiningLaserById, getConsumableById
         }}>
             {props.children}
         </EquipmentContext.Provider>
