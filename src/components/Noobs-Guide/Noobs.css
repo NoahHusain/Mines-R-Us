@@ -49,6 +49,13 @@
     flex-direction: column;
 }
 
+.flexParagraph7 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 .paragraphs {
     margin: 1em;
     padding: 1em;

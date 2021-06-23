@@ -9,11 +9,14 @@ import { MoonProvider } from "./Moons/MoonProvider";
 import { PlanetProvider } from "./Planets/PlanetProvider";
 import { OreList } from "./Ores/OreList";
 import { NoobsList } from "./Noobs-Guide/NoobsList";
+import { EquipmentList } from "./Equipment/EquipmentList";
+import { EquipmentProvider } from "./Equipment/EquipmentProvider";
 
 export const ApplicationViews = () => {
   return (
     <>
       <PostProvider>
+        <EquipmentProvider>
         <PlanetProvider>
           <MoonProvider>
             <OreProvider>
@@ -40,10 +43,15 @@ export const ApplicationViews = () => {
               <Route exact path="/Noobs-Guide">
                 <NoobsList />
               </Route>
+
+              <Route exact path="/Equipment">
+                <EquipmentList />
+              </Route>
               
             </OreProvider>
           </MoonProvider>
         </PlanetProvider>
+        </EquipmentProvider>
       </PostProvider>
     </>
   );

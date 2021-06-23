@@ -52,7 +52,10 @@ export const PartOne = () => {
             purchase the Prospector is 2,061,000 UEC. Meanwhile, the Mole is a
             quad crew miner with 96 units of cargo space. It houses not one, not
             two, but three Size 2 mining lasers on a 38.5 meter ship. The
-            current price of the Mole is 5,130,500. So which ship is better? It
+            current price of the Mole is 5,130,500. A quick note on cargo units. 
+            Each cargo unit can carry 100 pieces of ore so that means 32 units of 
+            cargo space equals 3200 units of ore. Likewise, 96 units of cargo space
+            will equal 9600 units of ore. So which ship is better? It
             really boils down to one question. Do you have friends that will
             mine with you? If the answer is yes, then the Mole is a good choice.
             If not, while you can Solo mine with a Mole, it is more efficient to
@@ -177,8 +180,9 @@ export const PartThree = () => {
           Consumables are temporary and expendable boosters that change the
           lasers characteristics to aid the laser operator in cracking the rock
           by modifying one or many of the five quirks discussed about mining
-          lasers. All consumables are manufactured by MISC, who also created the
-          Prospector mining ship from part one. These are near mandatory to
+          lasers. Most consumables are manufactured by MISC, who also created the
+          Prospector mining ship from part one but there are two consumables that 
+          are not manufactured by them. These are near mandatory to 
           carry to increase your effectiveness. Some are better than others and
           we will be discussing only the best of the best. First off and most
           important is Surge. Surge is an instant use consumable that overloads
@@ -344,7 +348,17 @@ export const PartSix = () => {
   return (
     <>
       <div className="flexParagraph6">
-        <p>Lorem Ipsum</p>
+        <p>Finally, after 30 minutes of finding that payday rock, cracking it down into small pieces, and extracting only the highest yield rocks, your cargo hold is full and you are ready to get paid! Now, you have two options on how to get paid, and how much you want to get paid for your efforts. Option one is to sell the unrefined ore at a refinery. Second option is to bring the ore to a refinery, pay for them to refine it, and then take the refined ore and sell it at a trade hub. Which one is the better option? Well, let me add this little piece of info that may point you in the right direction. Refining your materials instantly doubles what they are worth. Yes, you heard that right. After refining your cargo its value will instantly double BUT there is one caveat to this. Refining takes TIME. When at a refinery and choosing to refine your raw ore they will present you with nine options for how they will refine your ore. All of them are powerful in their own way with some having quick refining times of 30 minutes, while others maximize your yield but take more time. Ultimately what refining process you choose will depend on how much time or money you are willing to spend. For me the choice is quite simple. As a miner focusing on making the most amount of profit, I am willing to wait the extra amount of time needed to have a slower but more refined refining process that outputs the most yield from my raw ore. You have two options that follow that line of thought. First is Dionyx Solvenation which is the slowest refining time in the game. For 32 units of cargo of Quantinium (the highest paying ore) you are looking at a refining time of 36 hours. Yes you heard me correctly, 36 hours of waiting. To offset this, Dinyx Solvenation is also the cheapest refining method while also yielding the highest yield at the end. If that is a bit too much waiting for you, your best option while retaining the same yield would be Pyrometric Chromalysis. This doubles the cost of refining compared to Dionyx Solvenation (which is overall fine due to Dionyx Solvenation being so cheap) and speeds up the time needed to refine from 36 hours down to 16 hours. Feel free to checkout our refineries page to see the other methods strengths and weaknesses. Miners should also take into consideration that each refinery has its own specializations on what ore they are proficient in refining. Some refineries will give you a small percentage benefit to a certain ores refinement or have a small negative percentage in refining. Ultimately the benefits are small enough to where I just go to the nearest refinery from where I filled my ship to be as time efficient as possible. You can find all refineries proficiencies and deficiencies on the refineries page. Now, after waiting for your precious ore to refine you are finally ready to sell it at a trade hub. Grab your biggest cargo freighter and head to the refinery where you dropped off your unrefined ore, navigate yourself to the refinery deck terminals and tell them to put the ore in your ship. Once that is finished you will now see the ore being stored in your cargo hold! Head to the closest major planet and their main city to sell your ore! </p>
+      </div>
+    </>
+  );
+};
+
+export const Epilogue = () => {
+  return (
+    <>
+      <div className="flexParagraph7">
+        <p>If you have read all this, you are well equipped to begin your days as a miner in Star Citizen. This was a very high level overview of the occupation and you will learn new things as you get more and more immersed in the career. A couple final notes of caution though, be very careful when hauling your refined ore to trade markets as this is the most risky step of the entire process. If you notice there is a lot of chatter about pirates being in an area, steer well clear of that planet system as a miner transporting his cargo is a pirates fantasy! Also if you are one of the brave souls like me who mine Quantinium exclusively, note that once you bring even a single piece of ore onto your ship you have started a 15 minute timer where the Quantinium rapidly starts to become instable within your cargo hold and if not brought back to the refinery within those 15 minutes your ship will detonate. With that being said it is best when Quantinium mining to get every piece of Quantinium broken down into extractable parts and then once every piece is ready to be extracted begin that process. With that all being said, get out there and begin the lucrative career of mining! Good luck, and may El Dorado be within your reach! </p>
       </div>
     </>
   );

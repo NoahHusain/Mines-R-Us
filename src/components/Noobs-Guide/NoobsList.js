@@ -1,5 +1,5 @@
 import "./Noobs.css"
-import { Prelude, PartOne, PartTwo, PartThree, PartFour, PartFive, PartSix } from "./NoobsContent";
+import { Prelude, PartOne, PartTwo, PartThree, PartFour, PartFive, PartSix, Epilogue } from "./NoobsContent";
 
 export const NoobsList = () => {
 
@@ -28,6 +28,9 @@ export const NoobsList = () => {
 
     <h2 className="goldenRodText center">Part Six: Refining & Payday</h2>
     <div className="blueText paragraphs">{PartSix()}</div>
+
+    <h2 className="goldenRodText center">Epilogue: Cautions & Congratulations </h2>
+    <div className="blueText paragraphs">{Epilogue()}</div>
 
 
     </>
