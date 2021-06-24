@@ -27,11 +27,11 @@ export const LaserDetail = () => {
       <div className="blueText">Power Output: {laser.powerOutput}</div>
       <div className="blueText">Optimal Range: {laser.rangeOptimal} Meters</div>
       <div className="blueText">Maximum Range: {laser.rangeMax} Meters</div>
-      <div className="blueText">Optimal Window Size Modifier: {laser.optimalWindowSize} </div>
-      <div className="blueText">Instability Modifier: {laser.instability} </div>
-      <div className="blueText">Resistance Modifier: {laser.resistance} </div>
+      <div className="blueText">Optimal Window Size Modifier: {laser.optimalWindowSize}% </div>
+      <div className="blueText">Instability Modifier: {laser.instability}% </div>
+      <div className="blueText">Resistance Modifier: {laser.resistance}% </div>
       <div className="blueText">Consumable Slots: {laser.consumables} </div>
-      <div className="blueText">Price: {laser.price} </div>
+      <div className="blueText">Price: {laser.price} UEC</div>
     </section>
   );
 };
