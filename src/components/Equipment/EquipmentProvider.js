@@ -19,7 +19,6 @@ export const EquipmentProvider = (props) => {
     const getShipById = (id) => {
         return fetch(`http://localhost:8088/ships/${id}`)
         .then(res => res.json())
-        .then(setShips)
     }
 
     const getMiningLasers = () => {
@@ -31,7 +30,6 @@ export const EquipmentProvider = (props) => {
     const getMiningLaserById = (id) => {
         return fetch(`http://localhost:8088/miningLasers/${id}`)
         .then(res => res.json())
-        .then(setMiningLasers)
     }
 
     const getConsumables = () => {
@@ -43,7 +41,6 @@ export const EquipmentProvider = (props) => {
     const getConsumableById = (id) => {
         return fetch(`http://localhost:8088/consumables/${id}`)
         .then(res => res.json())
-        .then(setConsumables)
     }
 
 
