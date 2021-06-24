@@ -14,12 +14,16 @@ import { EquipmentProvider } from "./Equipment/EquipmentProvider";
 import { ShipDetail } from "./Equipment/ShipDetail";
 import { LaserDetail } from "./Equipment/LaserDetail";
 import { ConsumableDetail } from "./Equipment/ConsumableDetail";
+import { RefineryProvider } from "./Refineries/RefineriesProvider";
+import { RefineriesList } from "./Refineries/RefineriesList";
+import { RefineryDetail } from "./Refineries/RefineriesDetail";
 
 
 export const ApplicationViews = () => {
   return (
     <>
       <PostProvider>
+        <RefineryProvider>
         <EquipmentProvider>
         <PlanetProvider>
           <MoonProvider>
@@ -63,11 +67,20 @@ export const ApplicationViews = () => {
             <Route exact path="/consumables/detail/:consumableId(\d+)">
               <ConsumableDetail />
             </Route>
-              
+
+            <Route exact path="/Refineries">
+              <RefineriesList />
+            </Route>
+
+            <Route exact path="/refineries/detail/:refineryId(\d+)">
+              <RefineryDetail />
+            </Route>
+
             </OreProvider>
           </MoonProvider>
         </PlanetProvider>
         </EquipmentProvider>
+        </RefineryProvider>
       </PostProvider>
     </>
   );
