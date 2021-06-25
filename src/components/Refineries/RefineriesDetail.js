@@ -18,7 +18,6 @@ export const RefineryDetail = () => {
 
   const [refineryEfficiency, setRefineryEfficiency] = useState([])
 
-
   const history = useHistory();
 
   const { refineryId } = useParams();
@@ -52,28 +51,3 @@ export const RefineryDetail = () => {
     </section>
   );
 };
-
-
-
-
-
-// useEffect(() => {
-//   getRefineryEfficiency(refineryId).then(res => {
-//     const efficientOre = res.filter(ore => {
-//       if (ore.efficient === true) {
-//         return
-//       }
-//       else {
-//         console.log(ore)
-//       }
-//     })
-//     const inefficientOre = res.filter(ore => {
-//       if (ore.efficient === true) {
-//         console.log(ore)
-//       }
-//       else {
-//         return
-//       }
-//     })
-//   });
-// }, []);
