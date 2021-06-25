@@ -36,7 +36,7 @@ export const Register = (props) => {
                         .then(res => res.json())
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
-                                localStorage.setItem("kennel_customer", createdUser.id)
+                                localStorage.setItem("mines_customer", createdUser.id)
                                 history.push("/")
                             }
                         })
