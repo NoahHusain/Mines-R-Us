@@ -52,8 +52,8 @@ export const OreList = () => {
       <h1 className="goldenRodText center">Ore</h1>
 
       <h2 className="goldenRodText center">Exceedingly Rare Ores</h2>
+      <section className="flexOres goldenRodBox">
       {exceedinglyRareOres.map((ore) => (
-        <section className="posts">
           <article className="post centerOres">
             <div className="post__oreId blueText">Name: {ore.name}</div>
             <div className="post__landingPoint blueText">
@@ -63,11 +63,11 @@ export const OreList = () => {
             Value Refined: {ore.valueRefined} UEC
             </div>
           </article>
-        </section>
       ))}
+      </section>
       <h2 className="goldenRodText center">Rare Ores</h2>
+      <section className="flexOres goldenRodBox">
       {rareOres.map((ore) => (
-        <section className="posts">
           <article className="post centerOres">
             <div className="post__oreId blueText">Name: {ore.name}</div>
             <div className="post__landingPoint blueText">
@@ -77,11 +77,11 @@ export const OreList = () => {
             Value Refined: {ore.valueRefined} UEC
             </div>
           </article>
-        </section>
       ))}
+      </section>
       <h2 className="goldenRodText center">Less Common Ores</h2>
+      <section className="flexOres goldenRodBox">
       {lessCommonOres.map((ore) => (
-        <section className="posts">
           <article className="post centerOres">
             <div className="post__oreId blueText">Name: {ore.name}</div>
             <div className="post__landingPoint blueText">
@@ -91,11 +91,11 @@ export const OreList = () => {
             Value Refined: {ore.valueRefined} UEC
             </div>
           </article>
-        </section>
       ))}
+      </section>
       <h2 className="goldenRodText center">Common Ores</h2>
+      <section className="flexOres goldenRodBox">
       {commonOres.map((ore) => (
-        <section className="posts">
           <article className="post centerOres">
             <div className="post__oreId blueText">Name: {ore.name}</div>
             <div className="post__landingPoint blueText">
@@ -105,11 +105,11 @@ export const OreList = () => {
             Value Refined: {ore.valueRefined} UEC
             </div>
           </article>
-        </section>
       ))}
+        </section>
       <h2 className="goldenRodText center">Exceedingly Common Ores</h2>
       {exceedinglyCommonOres.map((ore) => (
-        <section className="posts">
+        <section className="flexOres goldenRodBox">
           <article className="post centerOres">
             <div className="post__oreId blueText">Name: {ore.name}</div>
             <div className="post__landingPoint blueText">

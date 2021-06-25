@@ -19,10 +19,12 @@ export const RefineryProvider = (props) => {
         .then(res => res.json())
     }
 
-    const getRefineryEfficiency = () => {
-        return fetch ("http://localhost:8088/oreRefineries/?_expand=refinery&_expand=ore")
+    const getRefineryEfficiency = (refineryId) => {
+        return fetch (`http://localhost:8088/oreRefineries/?refineryId=${refineryId}&_expand=ore`)
         .then(res => res.json())
     }
+
+    
 
     
 

@@ -5,3 +5,12 @@
 .centerOres {
     text-align: center;
 }
+
+.flexOres {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 29%;
+    margin-right: 29%;
+}
