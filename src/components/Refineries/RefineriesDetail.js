@@ -45,7 +45,7 @@ export const RefineryDetail = () => {
         return `${ore.ore.name} ${ore.efficiencyBonus}% `
       })}</div>
       <div className="blueText">Efficiency Penalty: {inefficientOre.map(ore => {
-        return `${ore.ore.name} ${ore.efficiencyBonus}%, `
+        return `${ore.ore.name} ${ore.efficiencyBonus}% `
       })}</div>
       
     </section>
