@@ -21,7 +21,7 @@ export const PostList = () => {
   };
 
   const deletePostButton = (userId, postId) => {
-    if (userId == localStorage.getItem("mines_customer") || userId === 5) {
+    if (userId == localStorage.getItem("mines_customer") || localStorage.getItem("mines_customer") === 5) {
       return <button
       className="post blueText"
       id={`post--${postId}`}
@@ -39,7 +39,7 @@ export const PostList = () => {
   }
   
   const editPostButton = (userId, postId) => {
-    if (userId == localStorage.getItem("mines_customer") || userId === 5 ) {
+    if (userId == localStorage.getItem("mines_customer") || localStorage.getItem("mines_customer") === 5 ) {
       return <button
       className="post blueText"
       id={`post--${postId}`}
