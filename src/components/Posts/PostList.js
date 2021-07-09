@@ -20,6 +20,42 @@ export const PostList = () => {
     history.push(`/posts/edit/${postId}`);
   };
 
+  const deletePostButton = (userId, postId) => {
+    if (userId == localStorage.getItem("mines_customer") || userId === 5) {
+      return <button
+      className="post blueText"
+      id={`post--${postId}`}
+      onClick={(event) => {
+        event.preventDefault();
+        handleDeletePost(postId);
+      }}
+    >
+      Delete Post
+    </button>
+    }
+    else {
+      return 
+    }
+  }
+  
+  const editPostButton = (userId, postId) => {
+    if (userId == localStorage.getItem("mines_customer") || userId === 5 ) {
+      return <button
+      className="post blueText"
+      id={`post--${postId}`}
+      onClick={(event) => {
+        event.preventDefault();
+        handleUpdatePost(postId);
+      }}
+    >
+      Edit Post
+    </button>
+    }
+    else {
+      return 
+    }
+  }
+
   return (
     <>
       <h1 className="goldenRodText center">Posts</h1>
@@ -54,29 +90,18 @@ export const PostList = () => {
             <div className="post__userId blueText">
               Posted By: {post.user.name} on {post.timestamp}
             </div>
-            <button
-              className="post blueText"
-              id={`post--${post.id}`}
-              onClick={(event) => {
-                event.preventDefault();
-                handleDeletePost(post.id);
-              }}
-            >
-              Delete Post
-            </button>
-            <button
-              className="post blueText"
-              id={`post--${post.id}`}
-              onClick={(event) => {
-                event.preventDefault();
-                handleUpdatePost(post.id);
-              }}
-            >
-              Edit Post
-            </button>
+            {deletePostButton(post.userId, post.id)}
+            {editPostButton(post.userId, post.id)}
+            
           </article>
         </section>
       ))}
     </>
   );
 };
+
+
+
+
+
+

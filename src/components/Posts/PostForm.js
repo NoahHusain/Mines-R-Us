@@ -15,7 +15,7 @@ export const PostForm = () => {
 
     
     const [posts, setPosts] = useState({moonId: 0})
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
 
     const {postId} = useParams();
 	  const history = useHistory();
@@ -38,22 +38,50 @@ export const PostForm = () => {
         getMoons()
     }, [])
 
+    useEffect(() => {
+      if (isLoading === false) {
+        return
+      }
+      else {
+        
+        handleSavePost()
+      }
+  }, [isLoading])
+
+
+    const checkForm = () => {
+      if (
+        posts.oreId === undefined ||
+        posts.planetId === undefined ||
+        posts.landingPoint === undefined ||
+        posts.description === undefined ||
+        posts.rockData === undefined
+      ){return false}
+      else {return true}
+    }
+
 
 
     const handleSavePost = () => {
-        const userId = localStorage.getItem("mines_customer")  
-        addPost({
-              userId: parseInt(userId),
-              oreId: parseInt(posts.oreId),
-              planetId: parseInt(posts.planetId),
-              moonId: parseInt(posts.moonId),
-              landingPoint: posts.landingPoint,
-              description: posts.description,
-              rockData: posts.rockData,
-              timestamp: new Date().toISOString().slice(0, 10)
-          })
-          .then(() => history.push("/posts"))
+        const userId = localStorage.getItem("mines_customer")
+        if (checkForm() === true) {
+          addPost({
+            userId: parseInt(userId),
+            oreId: parseInt(posts.oreId),
+            planetId: parseInt(posts.planetId),
+            moonId: parseInt(posts.moonId),
+            landingPoint: posts.landingPoint,
+            description: posts.description,
+            rockData: posts.rockData,
+            timestamp: new Date().toISOString().slice(0, 10)
+        })
+        .then(() => history.push("/posts"))
+        }  
+        else {
+          window.alert('Please fill in all form fields before submitting post. Moon field can be left blank if not applicable.')
+          setIsLoading(false)
         }
+      }
 
 
     return (
@@ -120,9 +148,10 @@ export const PostForm = () => {
         </fieldset>
         
         <button className="center post blueText"
+          disabled={isLoading}
           onClick={event => {
+            setIsLoading(true)
             event.preventDefault() 
-            handleSavePost()
           }}>Save Post</button>
         </form>
         </>
