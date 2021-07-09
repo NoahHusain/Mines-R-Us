@@ -9,18 +9,18 @@ export const RefineryProvider = (props) => {
 
 
     const getRefineries = () => {
-        return fetch("http://localhost:8088/refineries")
+        return fetch("https://mines-r-us-api-rly2l.ondigitalocean.app/refineries")
         .then(res => res.json())
         .then(setRefineries)
     }
 
     const getRefineryById = (id) => {
-        return fetch(`http://localhost:8088/refineries/${id}?_expand=planet`)
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/refineries/${id}?_expand=planet`)
         .then(res => res.json())
     }
 
     const getRefineryEfficiency = (refineryId) => {
-        return fetch (`http://localhost:8088/oreRefineries/?refineryId=${refineryId}&_expand=ore`)
+        return fetch (`https://mines-r-us-api-rly2l.ondigitalocean.app/oreRefineries/?refineryId=${refineryId}&_expand=ore`)
         .then(res => res.json())
     }
 

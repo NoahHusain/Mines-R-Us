@@ -8,13 +8,13 @@ export const PostProvider = (props) => {
     const [posts, setPosts] = useState([])
 
     const getPosts = () => {
-        return fetch("http://localhost:8088/orePatches?_expand=user&_expand=ore&_expand=planet&_expand=moon")
+        return fetch("https://mines-r-us-api-rly2l.ondigitalocean.app/orePatches?_expand=user&_expand=ore&_expand=planet&_expand=moon")
         .then(res => res.json())
         .then(setPosts)
     }
 
     const addPost = postObject => {
-        return fetch("http://localhost:8088/orePatches", {
+        return fetch("https://mines-r-us-api-rly2l.ondigitalocean.app/orePatches", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -25,14 +25,14 @@ export const PostProvider = (props) => {
     }
 
     const deletePost = orePatchId => {
-        return fetch(`http://localhost:8088/orePatches/${orePatchId}`, {
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/orePatches/${orePatchId}`, {
             method: "DELETE"
         })
             .then(getPosts)
     }
 
     const updatePost = orePatch => {
-        return fetch(`http://localhost:8088/orePatches/${orePatch.id}`, {
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/orePatches/${orePatch.id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
@@ -43,7 +43,7 @@ export const PostProvider = (props) => {
       }
 
       const getPostById = orePatchId => {
-        return fetch(`http://localhost:8088/orePatches/${orePatchId}`)
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/orePatches/${orePatchId}`)
         .then(res => res.json())
     }
 

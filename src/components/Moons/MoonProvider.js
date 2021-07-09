@@ -8,13 +8,13 @@ export const MoonProvider = (props) => {
     const [moons, setMoons] = useState([])
 
     const getMoons = () => {
-        return fetch("http://localhost:8088/moons?_expand=planet")
+        return fetch("https://mines-r-us-api-rly2l.ondigitalocean.app/moons?_expand=planet")
         .then(res => res.json())
         .then(setMoons)
     }
 
     const addMoon = moonObject => {
-        return fetch("http://localhost:8088/moons", {
+        return fetch("https://mines-r-us-api-rly2l.ondigitalocean.app/moons", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -25,14 +25,14 @@ export const MoonProvider = (props) => {
     }
 
     const deleteMoon = moonId => {
-        return fetch(`http://localhost:8088/moons/${moonId}`, {
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/moons/${moonId}`, {
             method: "DELETE"
         })
             .then(getMoons)
     }
 
     const updateMoon = moonId => {
-        return fetch(`http://localhost:8088/moons/${moonId}`, {
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/moons/${moonId}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
@@ -43,7 +43,7 @@ export const MoonProvider = (props) => {
       }
 
       const getMoonById = moonId => {
-        return fetch(`http://localhost:8088/moons/${moonId}`)
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/moons/${moonId}`)
         .then(res => res.json())
     }
 

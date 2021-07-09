@@ -8,13 +8,13 @@ export const PlanetProvider = (props) => {
     const [planets, setPlanets] = useState([])
 
     const getPlanets = () => {
-        return fetch("http://localhost:8088/planets")
+        return fetch("https://mines-r-us-api-rly2l.ondigitalocean.app/planets")
         .then(res => res.json())
         .then(setPlanets)
     }
 
     const addPlanet = planetObject => {
-        return fetch("http://localhost:8088/moons", {
+        return fetch("https://mines-r-us-api-rly2l.ondigitalocean.app/moons", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -25,14 +25,14 @@ export const PlanetProvider = (props) => {
     }
 
     const deletePlanet = planetId => {
-        return fetch(`http://localhost:8088/planets/${planetId}`, {
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/planets/${planetId}`, {
             method: "DELETE"
         })
             .then(getPlanets)
     }
 
     const updatePlanet = planetId => {
-        return fetch(`http://localhost:8088/planets/${planetId}`, {
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/planets/${planetId}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
@@ -43,7 +43,7 @@ export const PlanetProvider = (props) => {
       }
 
       const getPlanetById = planetId => {
-        return fetch(`http://localhost:8088/planets/${planetId}`)
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/planets/${planetId}`)
         .then(res => res.json())
     }
 

@@ -8,13 +8,13 @@ export const OreProvider = (props) => {
     const [ores, setOres] = useState([])
 
     const getOres = () => {
-        return fetch("http://localhost:8088/ores")
+        return fetch("https://mines-r-us-api-rly2l.ondigitalocean.app/ores")
         .then(res => res.json())
         .then(setOres)
     }
 
     const addOre = oreObject => {
-        return fetch("http://localhost:8088/ores", {
+        return fetch("https://mines-r-us-api-rly2l.ondigitalocean.app/ores", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -25,14 +25,14 @@ export const OreProvider = (props) => {
     }
 
     const deleteOre = oreId => {
-        return fetch(`http://localhost:8088/ores/${oreId}`, {
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/ores/${oreId}`, {
             method: "DELETE"
         })
             .then(getOres)
     }
 
     const updateOre = oreId => {
-        return fetch(`http://localhost:8088/ores/${oreId}`, {
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/ores/${oreId}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
@@ -43,7 +43,7 @@ export const OreProvider = (props) => {
       }
 
       const getOreById = oreId => {
-        return fetch(`http://localhost:8088/ores/${oreId}`)
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/ores/${oreId}`)
         .then(res => res.json())
     }
 

@@ -11,35 +11,35 @@ export const EquipmentProvider = (props) => {
 
 
     const getShips = () => {
-        return fetch("http://localhost:8088/ships")
+        return fetch("https://mines-r-us-api-rly2l.ondigitalocean.app/ships")
         .then(res => res.json())
         .then(setShips)
     }
 
     const getShipById = (id) => {
-        return fetch(`http://localhost:8088/ships/${id}`)
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/ships/${id}`)
         .then(res => res.json())
     }
 
     const getMiningLasers = () => {
-        return fetch("http://localhost:8088/miningLasers")
+        return fetch("https://mines-r-us-api-rly2l.ondigitalocean.app/miningLasers")
         .then(res => res.json())
         .then(setMiningLasers)
     }
 
     const getMiningLaserById = (id) => {
-        return fetch(`http://localhost:8088/miningLasers/${id}`)
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/miningLasers/${id}`)
         .then(res => res.json())
     }
 
     const getConsumables = () => {
-        return fetch("http://localhost:8088/consumables")
+        return fetch("https://mines-r-us-api-rly2l.ondigitalocean.app/consumables")
         .then(res => res.json())
         .then(setConsumables)
     }
 
     const getConsumableById = (id) => {
-        return fetch(`http://localhost:8088/consumables/${id}`)
+        return fetch(`https://mines-r-us-api-rly2l.ondigitalocean.app/consumables/${id}`)
         .then(res => res.json())
     }
 
